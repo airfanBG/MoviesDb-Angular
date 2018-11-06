@@ -1,0 +1,15 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+button {
+    background-color: #879292;
+}
+
+img {
+    width: 100%;
+}
