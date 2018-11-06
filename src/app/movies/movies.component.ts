@@ -17,7 +17,7 @@ theaters:Object;
     this.movieService.getPopular().subscribe(x=>{this.popular=x;}
      
       );
-    this.movieService.getTheaters().subscribe(x=>{this.theaters=x});
+    this.movieService.getTheaters().subscribe(x=>{this.theaters=x;});
   }
 
 }
