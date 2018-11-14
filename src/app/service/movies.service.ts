@@ -12,7 +12,8 @@ path: string= 'https://api.themoviedb.org/3/';
 popular:string = 'discover/movie?sort_by=popularity.desc';
 authentication:string = '&api_key=';
 theaters:string='discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22';
-
+movie: string="movie/";
+movieAuth: string='?api_key=';
 constructor(private httpclient: HttpClient) { 
 
 
@@ -25,5 +26,8 @@ constructor(private httpclient: HttpClient) {
     getTheaters():Observable<Object>{
         return this.httpclient.get(`${this.path}${this.theaters}${this.authentication}${apiKey}
         `);
+    }
+    getMovie(id){
+        return this.httpclient.get(`${this.path}${this.movie}`+ id+`${this.movieAuth}${apiKey}`);
     }
 }
